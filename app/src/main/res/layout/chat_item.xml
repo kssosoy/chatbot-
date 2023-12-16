@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/chatbot_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/chatbot"
+        android:layout_marginEnd="8dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/left_chat_view"
+        android:background="@drawable/white_round_corner"
+        android:backgroundTint="@color/bright_yellow"
+        android:padding="8dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toRightOf="@id/chatbot_icon">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/left_chat_text_view"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:fontFamily="@font/segoeui"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/right_chat_view"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/white_round_corner"
+        android:backgroundTint="@color/skyblue"
+        android:padding="8dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/right_chat_text_view"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:fontFamily="@font/segoeui"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/recommend_button"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:textSize="10sp"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/button_message_item"
+        app:backgroundTint="@color/bright_yellow"
+        android:textColor="@color/black"
+        android:layout_marginStart="48dp"
+        app:fontFamily="@font/segoeui"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

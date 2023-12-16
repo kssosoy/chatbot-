@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_marginBottom="-2dp"
+        android:background="@drawable/background" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome_text"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="15dp"
+        app:fontFamily="@font/segoeui"
+        />
+
+
+
+    <TextView
+        android:id="@+id/chatbot_ask_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="챗봇에게 물어보기"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+        android:textColor="@color/black"
+        app:fontFamily="@font/segoeui"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:id="@+id/bottom_layout"
+        tools:ignore="ExtraText">
+
+        <EditText
+            android:id="@+id/message_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/send_btn"
+            android:background="@drawable/rounded_corner"
+            android:hint="내용을 입력하세요"
+            android:padding="8dp" />
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/send_btn"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:padding="3dp"
+            android:src="@drawable/send"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
